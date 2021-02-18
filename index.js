@@ -45,8 +45,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
+function copy(/*your code here*/originalFlavors){
     /*your code here*/
+    const newFlavorsArray = [...originalFlavors];
+    return newFlavorsArray;
 }    
 
 
@@ -64,8 +66,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
+function is31Flavors(/*your code here*/newFlavorsArray){
    /*your code here*/
+   if(newFlavorsArray.length === 31){
+       return true;
+   } else {
+       return false;
+   }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -80,9 +87,11 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(/*your code here*/){
+let newFlavor = 'Rainbow Sherbert'
+function addFlavor(/*your code here*/newFlavorsArray, newFlavor){
    /*your code here*/
+   newFlavorsArray.unshift(newFlavor);
+   return newFlavorsArray;
 }
 
 
@@ -97,8 +106,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
+function removeLastFlavor(/*your code here*/originalFlavors){
    /*your code here*/
+   originalFlavors.pop();
+   return originalFlavors;
 }
 
 
@@ -113,9 +124,9 @@ Use the getFlavorByIndex function below to do the following:
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
-
-function getFlavorByIndex(/*your code here*/){
+function getFlavorByIndex(/*your code here*/originalFlavors, index){
     /*your code here*/
+    return originaFlavors;
 }
 
 
@@ -134,8 +145,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(/*your code here*/originalFLavors, string){
     /*your code here*/
+    let removedFlavor = [];
+    for(let i = 0; i < originalFlavors.length; i++){
+        if(originalFlavors[i].includes(string)){
+            
+        }
+    }
 }
 
 
